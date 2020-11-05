@@ -1,0 +1,35 @@
+1. Dot .
+
+2. Comma ,
+
+3. Colon :
+
+4. Semi-colon ;
+
+5. Single Quotation ' '
+
+6. Double Quotation " "
+
+7. Forward Slash /
+
+8. Backward Slash \
+
+9. Parenthesis ()
+
+10. Curly Brace/Bracket {}
+
+11. Square Brace/Bracket []
+
+12. Hash #
+
+13. Concatenation +
+
+14. Modulus %
+
+15. Asterisk *
+
+16. Ampersand &
+
+17. Tilde ~
+
+18. Assignment operator =
