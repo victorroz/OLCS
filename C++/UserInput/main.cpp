@@ -25,4 +25,6 @@ int main()
     cout << "Car Year: " << carYear << endl;
     cout << "Car Color: " << carColor << endl;
     cout << "Is car four wheel drive? " << isFourWheelDrive << endl;
+
+    return 0;
 }
