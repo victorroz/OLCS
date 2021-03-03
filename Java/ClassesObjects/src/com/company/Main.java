@@ -3,12 +3,12 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Student std1 = new Student(1, "Remon", 'H', 1, "vanilla@gmail.com");
+        Fruits f1 = new Fruits("Orange", "Orange", false);
 
-        std1.printStudentInfo();
+        f1.printInfo();
 
-        std1.setStdId(23);
+        Fruits f2 = new Fruits("Apple", "Red", false);
 
-        std1.printStudentInfo();
+        f2.printInfo();
     }
 }
