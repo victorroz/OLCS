@@ -17,7 +17,7 @@ public class Uploader {
             this.fileType = fileType;
             this.fileCreated = LocalDateTime.now();
 
-            System.out.println("File created with ID: " + this.fileId + " on " + this.fileCreated);
+            System.out.println("File successfully created on " + this.fileCreated);
         }
         else {
             System.out.println("Please upload a valid file.");
@@ -29,16 +29,24 @@ public class Uploader {
     }
 
     private boolean FileTypeChecker(String fileType) {
-        if(fileType == "txt" || fileType == "doc" || fileType == "jpg" || fileType == "png") {
-            return true;
+        try {
+            if (fileType == "txt" || fileType == "doc" || fileType == "jpg" || fileType == "png") {
+                return true;
+            }
+            throw new Exception();
+        } catch (Exception e) {
+            return false;
         }
-        return false;
     }
 
     private boolean FileSizeChecker(int fileSize) {
-        if(fileSize > 0 && fileSize <= 5120) {
-            return true;
+        try {
+            if (fileSize > 0 && fileSize <= 5120) {
+                return true;
+            }
+            throw new Exception();
+        } catch (Exception e) {
+            return false;
         }
-        return false;
     }
 }
