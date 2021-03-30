@@ -16,6 +16,8 @@ public class Main {
             System.out.print("File extension: ");
             String fExt = scanner.nextLine();
 
+            System.out.println(fExt);
+
             System.out.print("File Contents: ");
             String fContent = scanner.nextLine();
 

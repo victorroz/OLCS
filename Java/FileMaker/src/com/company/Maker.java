@@ -12,6 +12,7 @@ public class Maker {
     private static int mCount;
 
     public Maker(String mName, String mType, String mContent) {
+        System.out.println("Maker: " + mType);
         if (TypeChecker(mType)) {
             this.SetMId(IdCreator(mType));
             this.SetMName(mName, mType);
@@ -60,8 +61,11 @@ public class Maker {
     }
 
     private boolean TypeChecker(String mType) {
-        System.out.println("Type Checker");
-        if (mType == "txt" || mType == "doc" || mType == "py") {
+        System.out.println("Type checker: " + mType);
+        if (mType == "doc") {
+            System.out.println("doc");
+        }
+        if (mType.equals("txt") || mType.equals("doc") || mType.equals("py")) {
             return true;
         }
         return false;
