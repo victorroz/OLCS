@@ -1,19 +1,22 @@
 package com.company;
 
 import java.time.LocalDateTime;
-import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Maker {
     private String mId;
     private String mName;
+    private String mContent;
     private LocalDateTime mCreated;
     private static int mCount;
 
-    public Maker(String mName, String mType) {
-        if (TypeChecker(mType)) {
+    public Maker(String mName, String mType, String mContent) {
+        System.out.println("Constructor");
+        if (!TypeChecker(mType)) {
             this.SetMId(IdCreator(mType));
             this.SetMName(mName, mType);
+            this.SetMContent(mContent);
             this.SetMCreated();
             this.MakeFile();
         } else {
@@ -37,6 +40,14 @@ public class Maker {
         this.mName = mName + "." +mType;
     }
 
+    public String GetMContent() {
+        return mContent;
+    }
+
+    public void SetMContent(String mContent) {
+        this.mContent = mContent;
+    }
+
     public LocalDateTime GetMCreated() {
         return mCreated;
     }
@@ -50,7 +61,8 @@ public class Maker {
     }
 
     private boolean TypeChecker(String mType) {
-        if (mType == "txt" || mType == "doc" || mType == "txt") {
+        System.out.println("Type Checker");
+        if (mType == "txt" || mType == "doc" || mType == "py") {
             return true;
         }
         return false;
@@ -58,12 +70,9 @@ public class Maker {
 
     private void MakeFile() {
         try {
-            File file = new File(this.GetMName());
-            if (file.createNewFile()) {
-                System.out.println("File created successfully.");
-            } else {
-                System.out.println("File already exists.");
-            }
+            FileWriter fileWriter = new FileWriter(this.GetMName());
+            fileWriter.write(this.GetMContent());
+            fileWriter.close();
         } catch (IOException e) {
             System.out.println("An error occurred.");
         }
@@ -71,6 +80,7 @@ public class Maker {
 
     public void ShowInfo() {
         System.out.println("Filename: " + this.GetMName());
+        System.out.println("Content: " + this.GetMContent());
         System.out.println("File Created on: " + this.GetMCreated());
     }
 }
