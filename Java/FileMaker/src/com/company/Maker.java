@@ -12,8 +12,7 @@ public class Maker {
     private static int mCount;
 
     public Maker(String mName, String mType, String mContent) {
-        System.out.println("Constructor");
-        if (!TypeChecker(mType)) {
+        if (TypeChecker(mType)) {
             this.SetMId(IdCreator(mType));
             this.SetMName(mName, mType);
             this.SetMContent(mContent);

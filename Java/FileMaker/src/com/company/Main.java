@@ -19,8 +19,6 @@ public class Main {
             System.out.print("File Contents: ");
             String fContent = scanner.nextLine();
 
-//            System.out.println(fName + " " + fExt + " " + fContent);
-
             maker[i] = new Maker(fName, fExt, fContent);
         }
 
