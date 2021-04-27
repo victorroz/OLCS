@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Monda:wght@700&display=swap');
+
+:root {
+    --font-lato: 'Lato', sans-serif;
+    --font-monda: 'Monda', sans-serif;
+    --lato-weight-100: 100;
+    --lato-weight-300: 300;
+    --monda-weight-700: 700;
+    --bg-color: #f1f2f6;
+    --bg-calculator: #dfe4ea;
+    --primary-color: #7d5fff;
+    --dark-color: #3d3d3d;
+    --light-color: #838486;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-lato);
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background-color: var(--bg-calculator);
+    width: 400px;
+    height: auto;
+    padding: 50px 30px 40px 30px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px #7c5fff52;
+}
+
+.brand {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand p:first-child {
+    font-family: var(--font-monda);
+    text-transform: uppercase;
+    color: var(--light-color);
+    font-weight: var(--monda-weight-700);
+    align-self: flex-end;
+}
+
+.brand p:last-child {
+    color: var(--light-color);
+    font-size: 12px;
+    font-weight: var(--lato-weight-300);
+    letter-spacing: 2px;
+    align-self: center;
+}
+
+.screen {
+    margin-top: 5px;
+    background-color: var(--bg-color);
+    text-align: right;
+    height: 175px;
+    padding: 60px 25px;
+    border-radius: 5px;
+}
+
+.screen p {
+    color: var(--light-color);
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+.screen h2 {
+    color: var(--dark-color);
+    font-size: 40px;
+    padding-top: 5px;
+    font-weight: var(--lato-weight-300);
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 25px;
+    column-gap: 5px;
+}
+
+.buttons .btn {
+    background-color: var(--bg-color);
+    color: var(--light-color);
+    height: 60px;
+    width: 20%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    border-radius: 6px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.144);
+}
+
+.buttons .btn:first-child {
+    border-top-left-radius: 15px;
+}
+
+.buttons .btn:nth-child(4) {
+    border-top-right-radius: 15px;
+}
+
+.buttons .btn:last-child {
+    border-bottom-right-radius: 15px;
+}
+
+.buttons .btn:nth-child(17) {
+    flex-grow: 1;
+    margin-right: 17px;
+    border-bottom-left-radius: 15px;
+}
+
+.buttons .btn:nth-child(18) {
+    margin-right: 17px;
+}
+
+.text-purple {
+    color: var(--primary-color) !important;
+}
+
+.bg-purple {
+    background-color: var(--primary-color) !important;
+    color: var(--bg-color) !important;
+}
+
