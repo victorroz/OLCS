@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+main > * {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+#translate {
+    background: linear-gradient(#f3a683, black);
+    /* transform: translate(10px, -20px); */
+    transform: translateX(20px);
+    transition: 3s;
+}
+
+#translate:hover {
+    background: linear-gradient(black, #f3a683);
+}
+
+#rotate {
+    background: linear-gradient(#786fa6, black);
+    transition: 1.2s;
+    transition-timing-function: ease-in-out;
+}
+
+#rotate:hover {
+    transform: rotate(360deg);
+}
+
+#scale {
+    background-color: #63cdda;
+    transition: 200ms;
+}
+
+#scale:hover {
+    transform: scale(1.1) rotate(30deg);  
+}
