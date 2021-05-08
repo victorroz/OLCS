@@ -8,7 +8,7 @@
     width: 100px;
     height: 100px;
     background-color: dimgray;
-    /* animation: custom-animation 1s ease-in forwards infinite; */
+    animation: custom-animation 1s ease-in forwards infinite;
 }
 
 .parent:hover .child {
