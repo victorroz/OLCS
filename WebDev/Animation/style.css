@@ -1,0 +1,30 @@
+.parent {
+    width: 100%;
+    height: 50vh;
+    background-color: crimson;
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+    background-color: dimgray;
+    /* animation: custom-animation 1s ease-in forwards infinite; */
+}
+
+.parent:hover .child {
+    animation-play-state: paused;
+}
+
+@keyframes custom-animation {
+    0% {
+        background-color: green;
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        background-color: blue;
+    }
+}
