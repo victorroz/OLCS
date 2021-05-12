@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-inactive: darkgray;
+    --text-normal: rgb(82, 82, 82);
+
+}
+
+body {
+    background-color: rgb(200, 205, 209);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 18px; */
+}
+
+.container {
+    background-color: rgb(245, 245, 245);
+    width: 400px;
+    height: auto;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.048);
+}
+
+.header-buttons {
+    margin-left: 10px;
+}
+
+.header-buttons a {
+    text-decoration: none;
+    color: var(--text-normal);
+    background-color: rgb(235, 235, 235);
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 4px;
+}
+
+.header-buttons a:hover,
+.month-carousel a:hover {
+    background-color: rgb(25, 140, 235) !important;
+    color: rgb(235, 235, 235) !important;
+}
+
+.month-carousel {
+    display: flex;
+    margin-top: 30px;
+}
+
+.month-carousel a {
+    text-decoration: none;
+    color: var(--text-normal);
+    font-weight: 900;
+    background-color: #fff;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.048);
+}
+
+.month-carousel p {
+    text-align: center;
+    flex-grow: 1;
+    align-self: center;
+}
+
+.weekdays {
+    display: flex;
+    margin-top: 20px;
+}
+
+.weekdays p{
+    flex-grow: 1;
+    text-align: center;
+    color: var(--text-inactive);
+}
+
+.inactive {
+    color: var(--text-inactive) !important;
+}
+
+.active {
+    background-color: rgb(25, 140, 235) !important;
+    color: rgb(235, 235, 235) !important;
+    border-radius: 10px;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.days p {
+    flex: 14%;
+    text-align: center;
+    padding: 15px;
+    color:rgb(82, 82, 82);
+    cursor: pointer;
+}
+
+.days p:hover {
+    border: 3px solid rgba(92, 175, 243, 0.411) ;
+    border-radius: 10px;
+    padding: 12px !important;
+    color: rgb(25, 140, 235) !important;
+}
+
+.reminder {
+    margin: 20px 0 30px 25px;
+}
+
+.reminder a {
+    text-decoration: none;
+    color: rgb(146, 146, 146);
+}
+
+.reminder a:hover {
+    color: rgb(25, 140, 235);
+}
+
+.reminder a span {
+    margin-right: 16px;
+}
+
+.footer-buttons {
+    display: flex;
+}
+
+.footer-buttons a {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.footer-buttons a:first-child {
+    text-decoration: none;
+    color: var(--text-normal);
+    background-color: rgb(235, 235, 235);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.footer-buttons a:first-child:hover {
+    background-color: rgb(25, 140, 235);
+    color: rgb(235, 235, 235);
+}
+
+.footer-buttons a:last-child {
+    text-decoration: none;
+    background-color: rgb(25, 140, 235);
+    color: rgb(235, 235, 235);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.footer-buttons a:last-child:hover {
+    color: rgb(25, 140, 235);;
+    background-color: rgb(235, 235, 235);
+}
