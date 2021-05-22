@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+.bg-primary {
+    background-color: brown !important;
+}
+
+.display-1 {
+    font-family: 'Pattaya', sans-serif;
+}
